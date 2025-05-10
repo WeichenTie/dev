@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
 
 echo "code code/add-microsoft-repo boolean true" | sudo debconf-set-selections
-
-curl -Lo "$SCRIPTS_DOWNLOAD_DIR/code.deb" https://go.microsoft.com/fwlink/\?LinkID\=760868
-
-sudo apt -y install "$SCRIPTS_DOWNLOAD_DIR/code.deb"
+sudo apt -y install "$SCRIPTS_DOWNLOAD_DIR/code_1.100.0-1746623151_amd64.deb"

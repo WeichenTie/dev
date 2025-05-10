@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+sudo apt update && sudo apt install -y \
+  net-tools \
+  iproute2 \
+  iputils-ping \
+  dnsutils \
+  traceroute \
+  mtr \
+  nmap \
+  tcpdump \
+  iftop \
+  iperf3 \
+  whois \
+  curl \
+  wget \
+  ethtool \
+  telnet \
+  socat \
+  bind9-dnsutils \
+  arp-scan \
+  netcat-openbsd \
+  hping3 \
+  rsync

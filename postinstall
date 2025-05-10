@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cp -rf "$SCRIPTS_DIR/.configs/.zshrc" "$HOME/.zshrc"
+cp -rf "$SCRIPTS_DIR/.configs/kitty" "$HOME/.configs/kitty"

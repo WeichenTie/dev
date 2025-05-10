@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 sudo apt update -y
-sudo apt install -y git fzf ripgrep xclip jq tldr shutter python3-pip
-
+sudo apt install -y git curl wget fzf ripgrep xclip jq tldr shutter python3-pip
+ssh-keygen -t ed25519 -C "weichentie@gmail.com"
 tldr --update

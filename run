@@ -1,37 +1,33 @@
 #!/usr/bin/env bash
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
+source "$script_dir/utils.sh"
 
-if [[ -z "${dry_run}" ]]; then
-    dry_run="1"
+if [[ -z "${DRY_RUN}" ]]; then
+    DRY_RUN="1"
 fi
 
 export SCRIPTS_DIR=$script_dir
 export SCRIPTS_DOWNLOAD_DIR="$script_dir/downloads"
+export UTILS="$SCRIPTS_DIR/utils.sh"
 
-echo "$script_dir"
-echo "$SCRIPTS_DOWNLOAD_DIR"
-
-log() {
-    if [[ $dry_run == "1" ]]; then
-        echo "[DRY_RUN]: $1"
-    else
-        echo "$1"
-    fi
-}
-
-if [ "$dry_run" == "1" ]; then
-    log "DOING DRY RUN"
+if [ "$DRY_RUN" == "1" ]; then
+    log "DOING DRY RUN" bold_yellow
 fi
 
 
 runs_dir="$(find "$script_dir"/scripts -mindepth 1 -maxdepth 1 -executable | sort)"
 for s in $runs_dir; do
-    log "running script: $s"
+    log "[Running Script]: $s" bold_yellow
 
-    if [[ $dry_run == "0" ]]; then
+    if [[ $DRY_RUN == "0" ]]; then
         $s
     fi
+    log "[Finished]: $s" bold_green
 done
 
-echo "Done"
+log "[Running Script]: Post Install" bold_yellow
+
+"$script_dir"/postinstall
+
+log "Done!" bold_green

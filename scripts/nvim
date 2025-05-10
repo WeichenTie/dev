@@ -8,4 +8,6 @@ sudo mv "$SCRIPTS_DOWNLOAD_DIR/nvim-linux-x86_64.appimage" /opt/nvim/nvim
 
 mkdir -p "$HOME/.config"
 
+rm -rf "$HOME/.config/nvim"
+
 git clone https://github.com/WeichenTie/nvim.git "$HOME/.config/nvim"
