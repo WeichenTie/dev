@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+curl -Lo "$SCRIPTS_DOWNLOAD_DIR/chrome.deb" https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt update -y
+sudo apt install -y "$SCRIPTS_DOWNLOAD_DIR/chrome.deb"

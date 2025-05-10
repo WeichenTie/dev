@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+sudo apt update -y
+sudo apt install -y git ripgrep xclip jq tldr shutter python3-pip
+
+git clone git@github.com:junegunn/fzf.git "$HOME/personal/fzf"
+"$HOME/personal/fzf/install"
+
+tldr --update

@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+
+if [[ -z "${dry_run}" ]]; then
+    dry_run="1"
+fi
+
+export SCRIPTS_DIR=$script_dir
+export SCRIPTS_DOWNLOAD_DIR="$script_dir/downloads"
+
+echo "$script_dir"
+echo "$SCRIPTS_DOWNLOAD_DIR"
+
+log() {
+    if [[ $dry_run == "1" ]]; then
+        echo "[DRY_RUN]: $1"
+    else
+        echo "$1"
+    fi
+}
+
+if [ "$dry_run" == "1" ]; then
+    log "DOING DRY RUN"
+fi
+
+
+runs_dir="$(find "$script_dir"/scripts -mindepth 1 -maxdepth 1 -executable | sort)"
+for s in $runs_dir; do
+    log "running script: $s"
+
+    if [[ $dry_run == "0" ]]; then
+        $s
+    fi
+done
+
+echo "Done"

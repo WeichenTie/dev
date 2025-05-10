@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+curl -Lo "$SCRIPTS_DOWNLOAD_DIR/nvim-linux-x86_64.appimage" https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
+chmod u+x "$SCRIPTS_DOWNLOAD_DIR/nvim-linux-x86_64.appimage"
+
+sudo mkdir -p /opt/nvim
+sudo mv "$SCRIPTS_DOWNLOAD_DIR/nvim-linux-x86_64.appimage" /opt/nvim/nvim
+
+mkdir -p "$HOME/.config"
+
+git clone git@github.com:WeichenTie/nvim.git "$HOME/.config/nvim"
