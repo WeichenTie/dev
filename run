@@ -15,6 +15,7 @@ if [ "$DRY_RUN" == "1" ]; then
     log "DOING DRY RUN" bold_yellow
 fi
 
+mkdir -p "$SCRIPTS_DOWNLOAD_DIR"
 
 runs_dir="$(find "$script_dir"/scripts -mindepth 1 -maxdepth 1 -executable | sort)"
 for s in $runs_dir; do
