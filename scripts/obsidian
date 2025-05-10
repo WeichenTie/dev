@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+wget -O "$SCRIPTS_DOWNLOAD_DIR/obsidian.appimage" "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.8.10/Obsidian-1.8.10.AppImage"
+chmod u+x "$SCRIPTS_DOWNLOAD_DIR/obsidian.appimage"
+
+sudo mkdir -p /opt/obsidian
+sudo mv "$SCRIPTS_DOWNLOAD_DIR/obsidian.appimage" /opt/obsidian/obsidian
