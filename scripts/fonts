@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 curl -Lo "$SCRIPTS_DOWNLOAD_DIR/FiraCode.zip"  https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip
-curl -Lo "$SCRIPTS_DOWNLOAD_DIR/Iosevka.zip" "https://objects.githubusercontent.com/github-production-release-asset-2e65be/27574418/2fd5572e-62bc-47ea-81df-41fcc6c3a69c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250510%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250510T130419Z&X-Amz-Expires=300&X-Amz-Signature=868c74122e629343a89fe79e937d087d4bd48ab0a6460950a48f5856ee0bce10&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3DIosevka.zip&response-content-type=application%2Foctet-stream"
+curl -Lo "$SCRIPTS_DOWNLOAD_DIR/Iosevka.zip" "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Iosevka.zip"
 
 FONT_DIR="$HOME/.local/share/fonts"
 mkdir -p "$FONT_DIR"

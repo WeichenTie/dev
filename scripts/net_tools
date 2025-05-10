@@ -10,7 +10,6 @@ sudo apt update && sudo apt install -y \
   nmap \
   tcpdump \
   iftop \
-  iperf3 \
   whois \
   curl \
   wget \

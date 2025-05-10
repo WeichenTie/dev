@@ -2,4 +2,6 @@
 sudo apt update -y
 sudo apt install -y git curl wget fzf ripgrep xclip jq tldr shutter python3-pip
 ssh-keygen -t ed25519 -C "weichentie@gmail.com"
+git config --global user.name "Weichen Tie"
+git config --global user.email "weichentie@gmail.com"
 tldr --update
